@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        //cbAntiguedad.setOnClickListener(cbListener);
+        cbAntiguedad.setOnClickListener(cbListener);
 
 
 
