@@ -60,14 +60,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tvRetribuciones" />
 
     <TextView
-        android:id="@+id/tvEuroAntiguedad"
+        android:id="@+id/tvAntiguedad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
         android:text="€/mes"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPluses" />
+        app:layout_constraintTop_toTopOf="@+id/etAntiguedad"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/tvPluses"
@@ -97,13 +97,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/cbAntiguedad"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvPluses"
-        app:layout_constraintVertical_bias="0.473"
         app:layout_constraintLeft_toRightOf="@+id/cbAntiguedad"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginLeft="9dp"
+        app:layout_constraintTop_toTopOf="@+id/cbAntiguedad"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cbAntiguedad"
+        android:layout_marginBottom="0dp" />
 
     <CheckBox
         android:id="@+id/cbConvenio"
@@ -113,8 +112,19 @@
         android:textStyle="italic"
         android:layout_marginLeft="64dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/cbAntiguedad" />
+
+    <CheckBox
+        android:id="@+id/cbTransporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Plus de Transporte"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbConvenio" />
 
     <EditText
         android:id="@+id/etConvenio"
@@ -125,19 +135,43 @@
         app:layout_constraintBottom_toBottomOf="@+id/cbConvenio"
         android:layout_marginBottom="-54dp"
         app:layout_constraintLeft_toRightOf="@+id/cbConvenio"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/etAntiguedad"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toTopOf="@+id/cbConvenio"
+        android:layout_marginTop="0dp"
         app:layout_constraintVertical_bias="0.5" />
 
+    <EditText
+        android:id="@+id/etTransporte"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/cbTransporte"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="@+id/cbTransporte"
+        android:layout_marginTop="0dp"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/cbTransporte"
+        android:layout_marginLeft="16dp" />
+
     <TextView
-        android:id="@+id/tvEuroConveio"
+        android:id="@+id/tvConvenio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:text="€/mes"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvEuroAntiguedad" />
+        app:layout_constraintTop_toTopOf="@+id/etConvenio"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvTransporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="€/mes"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etTransporte" />
 
 </android.support.constraint.ConstraintLayout>
