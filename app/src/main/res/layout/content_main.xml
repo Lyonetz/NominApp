@@ -36,18 +36,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSalarioBase"
-        app:layout_constraintTop_toBottomOf="@+id/tvRetribuciones"
-        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toRightOf="@+id/tvSalarioBase"
-        android:layout_marginLeft="8dp"
         app:layout_constraintRight_toLeftOf="@+id/tvEuro"
-        android:layout_marginRight="0dp"
-        app:layout_constraintHorizontal_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRetribuciones"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/tvEuro"
@@ -64,55 +64,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
         android:text="€/mes"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etAntiguedad"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toTopOf="@+id/etAntiguedad" />
 
     <TextView
         android:id="@+id/tvPluses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
         android:text="Pluses"
         android:textStyle="bold"
-        android:layout_marginLeft="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/tvSalarioBase" />
 
     <CheckBox
         android:id="@+id/cbAntiguedad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="8dp"
         android:text="Plus de Antiguedad"
         android:textStyle="italic"
-        android:layout_marginLeft="64dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/tvPluses" />
-
-    <EditText
-        android:id="@+id/etAntiguedad"
-        android:layout_width="99dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintLeft_toRightOf="@+id/cbAntiguedad"
-        android:layout_marginLeft="9dp"
-        app:layout_constraintTop_toTopOf="@+id/cbAntiguedad"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cbAntiguedad"
-        android:layout_marginBottom="0dp" />
 
     <CheckBox
         android:id="@+id/cbConvenio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="24dp"
         android:text="Plus de Convenio"
         android:textStyle="italic"
-        android:layout_marginLeft="64dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/cbAntiguedad" />
 
     <CheckBox
@@ -126,43 +113,115 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbConvenio" />
 
+    <CheckBox
+        android:id="@+id/cbQuebranto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Quebranto de Moneda"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPeligrosidad" />
+
+    <CheckBox
+        android:id="@+id/cbPeligrosidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Plus de Peligrosidad"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTransporte" />
+
+    <EditText
+        android:id="@+id/etAntiguedad"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/cbAntiguedad"
+        app:layout_constraintLeft_toRightOf="@+id/cbAntiguedad"
+        app:layout_constraintRight_toLeftOf="@+id/tvAntiguedad"
+        app:layout_constraintTop_toTopOf="@+id/cbAntiguedad"
+        app:layout_constraintVertical_bias="0.473" />
+
     <EditText
         android:id="@+id/etConvenio"
         android:layout_width="99dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/cbConvenio"
-        android:layout_marginBottom="-54dp"
         app:layout_constraintLeft_toRightOf="@+id/cbConvenio"
-        android:layout_marginLeft="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/tvConvenio"
         app:layout_constraintTop_toTopOf="@+id/cbConvenio"
-        android:layout_marginTop="0dp"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.454" />
 
     <EditText
         android:id="@+id/etTransporte"
         android:layout_width="99dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/cbTransporte"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="@+id/cbTransporte"
-        android:layout_marginTop="0dp"
-        app:layout_constraintVertical_bias="0.5"
         app:layout_constraintLeft_toRightOf="@+id/cbTransporte"
-        android:layout_marginLeft="16dp" />
+        app:layout_constraintRight_toLeftOf="@+id/tvTransporte"
+        app:layout_constraintTop_toTopOf="@+id/cbTransporte"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <EditText
+        android:id="@+id/etPeligrosidad"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/cbPeligrosidad"
+        app:layout_constraintLeft_toRightOf="@+id/cbPeligrosidad"
+        app:layout_constraintTop_toTopOf="@+id/cbPeligrosidad"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/etQuebranto"
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/cbQuebranto"
+        app:layout_constraintLeft_toRightOf="@+id/cbQuebranto"
+        app:layout_constraintRight_toLeftOf="@+id/tvQuebranto"
+        app:layout_constraintTop_toTopOf="@+id/cbQuebranto"
+        app:layout_constraintVertical_bias="0.454" />
 
     <TextView
         android:id="@+id/tvConvenio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
         android:text="€/mes"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etConvenio"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toTopOf="@+id/etConvenio" />
 
     <TextView
         android:id="@+id/tvTransporte"
@@ -173,5 +232,25 @@
         android:text="€/mes"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/etTransporte" />
+
+    <TextView
+        android:id="@+id/tvQuebranto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="€/mes"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etQuebranto" />
+
+    <TextView
+        android:id="@+id/tvPeligrosidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="€/mes"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etPeligrosidad" />
 
 </android.support.constraint.ConstraintLayout>

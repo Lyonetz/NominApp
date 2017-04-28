@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText etTransporte;
     private TextView tvTransporte;
 
+    private CheckBox cbPeligrosidad;
+    private EditText etPeligrosidad;
+    private TextView tvPeligrosidad;
+
+    private CheckBox cbQuebranto;
+    private EditText etQuebranto;
+    private TextView tvQuebranto;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,41 +47,47 @@ public class MainActivity extends AppCompatActivity {
 
         cbAntiguedad = (CheckBox) findViewById(R.id.cbAntiguedad);
         etAntiguedad = (EditText) findViewById(R.id.etAntiguedad);
+        etAntiguedad.setVisibility(View.INVISIBLE);
         tvAntiguedad = (TextView) findViewById(R.id.tvAntiguedad);
+        tvAntiguedad.setVisibility(View.INVISIBLE);
 
         cbConvenio = (CheckBox) findViewById(R.id.cbConvenio);
         etConvenio = (EditText) findViewById(R.id.etConvenio);
+        etConvenio.setVisibility(View.INVISIBLE);
         tvConvenio = (TextView) findViewById(R.id.tvConvenio);
+        tvConvenio.setVisibility(View.INVISIBLE);
 
         cbTransporte = (CheckBox) findViewById(R.id.cbTransporte);
         etTransporte = (EditText) findViewById(R.id.etTransporte);
+        etTransporte.setVisibility(View.INVISIBLE);
         tvTransporte = (TextView) findViewById(R.id.tvTransporte);
+        tvTransporte.setVisibility(View.INVISIBLE);
+
+        cbPeligrosidad = (CheckBox) findViewById(R.id.cbPeligrosidad);
+        etPeligrosidad = (EditText) findViewById(R.id.etPeligrosidad);
+        etPeligrosidad.setVisibility(View.INVISIBLE);
+        tvPeligrosidad = (TextView) findViewById(R.id.tvPeligrosidad);
+        tvPeligrosidad.setVisibility(View.INVISIBLE);
+
+        cbQuebranto = (CheckBox) findViewById(R.id.cbQuebranto);
+        etQuebranto = (EditText) findViewById(R.id.etQuebranto);
+        etQuebranto.setVisibility(View.INVISIBLE);
+        tvQuebranto = (TextView) findViewById(R.id.tvQuebranto);
+        tvQuebranto.setVisibility(View.INVISIBLE);
 
         final Map<CheckBox, EditText> checkBoxEditTextMap = new HashMap<>();
         checkBoxEditTextMap.put(cbAntiguedad, etAntiguedad);
         checkBoxEditTextMap.put(cbConvenio, etConvenio);
         checkBoxEditTextMap.put(cbTransporte, etTransporte);
+        checkBoxEditTextMap.put(cbPeligrosidad, etPeligrosidad);
+        checkBoxEditTextMap.put(cbQuebranto, etQuebranto);
 
         final Map<CheckBox, TextView> checkBoxTextViewMap = new HashMap<>();
         checkBoxTextViewMap.put(cbAntiguedad,tvAntiguedad);
         checkBoxTextViewMap.put(cbConvenio, tvConvenio);
         checkBoxTextViewMap.put(cbTransporte, tvTransporte);
-
-        if(!cbAntiguedad.isChecked()) {
-            etAntiguedad.setVisibility(View.INVISIBLE);
-            tvAntiguedad.setVisibility(View.INVISIBLE);
-        }
-
-        if(!cbConvenio.isChecked()) {
-            etConvenio.setVisibility(View.INVISIBLE);
-            tvConvenio.setVisibility(View.INVISIBLE);
-        }
-
-        if(!cbTransporte.isChecked()) {
-            etTransporte.setVisibility(View.INVISIBLE);
-            tvTransporte.setVisibility(View.INVISIBLE);
-        }
-
+        checkBoxTextViewMap.put(cbPeligrosidad, tvPeligrosidad);
+        checkBoxTextViewMap.put(cbQuebranto, tvQuebranto);
 
         CheckBox.OnClickListener cbListener = new View.OnClickListener() {
             @Override
@@ -94,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
         cbAntiguedad.setOnClickListener(cbListener);
         cbConvenio.setOnClickListener(cbListener);
         cbTransporte.setOnClickListener(cbListener);
+        cbPeligrosidad.setOnClickListener(cbListener);
+        cbQuebranto.setOnClickListener(cbListener);
 
 
 
